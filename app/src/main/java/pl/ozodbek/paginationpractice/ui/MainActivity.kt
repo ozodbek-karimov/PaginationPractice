@@ -82,6 +82,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
+    /** SETTING UP NETWORK LISTENER */
     private fun networkStateListener() {
         networkListener = NetworkListener()
         lifecycleScope.launch(Dispatchers.Main) {
@@ -92,6 +94,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+    /** SETTING UP NETWORK LISTENER'S UI CHANGE  */
     private fun updateUI(isNetworkAvailable: Boolean) {
         binding.apply {
             when {
@@ -140,6 +144,8 @@ class MainActivity : AppCompatActivity() {
             binding.shimmerLayout.stopShimmer()
         }
     }
+
+
 
     override fun onDestroy() {
         super.onDestroy()
